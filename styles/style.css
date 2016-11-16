@@ -1,0 +1,211 @@
+/*desktop site is default*/
+#wrapper{
+  background-color: rgba(127, 106, 87, 0.95);
+  width: 80%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+header>h1{
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  margin-bottom: 0;
+  text-indent: -9999px;
+}
+
+#login, #register{
+  display: block;
+  float: right;
+  vertical-align: middle;
+  width: 30%;
+  height: 200%;
+  background-color: #937f6c;
+  margin: 10px 30px 10px 0;
+  padding: 0;
+  box-shadow: 3px 3px 3px #4c2706;
+  overflow: hidden;
+}
+
+#updates{
+  display: block;
+  float: left;
+  width: 50%;
+  height: 200%;
+  background-color: #937f6c;
+  margin: 10px 0 10px 30px;
+  padding: 0;
+  box-shadow: 3px 3px 3px #4c2706;
+  overflow: hidden;
+}
+
+#updates>p{
+  border-bottom: 2px solid #000;
+
+}
+
+#register{
+  background-size: 345px 40px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#updates>h3{
+  margin: 0 0 0 5px;
+  padding: 0;
+  font-size: 85%;
+}
+
+#updates>h2, #login>h2, #register>h2{
+  margin: 5px;
+  pading: 0;
+  font-size: 85%
+}
+
+#login>form, #register>form{
+  margin: 5px;
+}
+
+main p {
+  font-size: 85%;
+  margin: 5px;
+}
+
+#about{
+  display: block;
+  width: 80%;
+  background-color: #937f6c;
+  box-shadow: 3px 3px 3px #4c2706;
+  margin-left: 10%;
+}
+
+#about>h3{
+  text-align: center;
+}
+
+body {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "lucidia Typewriter", monospace;
+  background-color: #060606;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 290%;
+  margin: 0;
+  height: 100%;
+}
+
+label,input[type=submit]{
+  display: block;
+}
+
+fieldset{
+  border: none;
+  padding: 0 0 1em 30%;
+}
+
+#loginInf{
+  display: block;
+  padding-left: 0;
+}
+
+#registerInf{
+  display: block;
+  /*padding-top: 10%;*/
+  margin-top: 15%;
+  padding-left: 0;
+}
+
+#required{
+  padding-left: 25%;
+}
+
+table{
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+td{
+  text-align: center;
+  border: 1px solid #000;
+}
+
+th{
+  border: 1px solid #000;
+}
+
+/*mobile website*/
+@media only screen and (max-width: 760px){
+  header>h1{
+    background-image: url(../images/logo_mob.png);
+  }
+
+  body{
+    background-color: #675441;
+    background-image: none;
+  }
+
+  #wrapper {
+    font-size: 80%;
+    background-color: #7f6a57;
+    width: 100%;
+  }
+
+  #updates{
+    display: block;
+    width: 85%;
+    height: 200%;
+    background-color: #937f6c;
+    margin: 10px 0 10px 30px;
+    padding: 0;
+    box-shadow: 3px 3px 3px #4c2706;
+    overflow: hidden;
+  }
+
+  #login{
+    display: none;
+  }
+
+  #register{
+    display: none;
+  }
+
+}
+
+/*tablet website*/
+@media only screen and (min-width: 768px) and (max-width: 959px){
+  header>h1{
+    background-image: url(../images/logo_mob.png);
+  }
+
+  body{
+    background-color: #675441;
+    background-image: none;
+  }
+
+  #wrapper {
+    font-size: 80%;
+    background-color: #7f6a57;
+    width: 100%;
+  }
+
+  #updates{
+    display: block;
+    width: 85%;
+    height: 200%;
+    background-color: #937f6c;
+    margin: 10px 0 10px 30px;
+    padding: 0;
+    box-shadow: 3px 3px 3px #4c2706;
+    overflow: hidden;
+  }
+
+  #login{
+    display: none;
+  }
+
+  #register{
+    display: none;
+  }
+
+}

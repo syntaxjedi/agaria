@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles of Agaria</title>
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Chronicles of Agaria</h1>
+    </header>
+    <div id="wrapper">
+      <nav id="desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li class="drop">
+            <a href="about.html" class="dropdown">About</a>
+            <div class="drop-content">
+              <a href="./about/economy.html">Economy</a>
+              <a href="./about/races.html">Races</a>
+              <a href="./about/guilds.html">Guilds</a>
+              <a href="./about/professions.html">Professions</a>
+            </div>
+          </li>
+
+          <li><a href="game.html">Play</a></li>
+          <li><a href="forum.html">Forum</a></li>
+
+          <li class="drop">
+            <a href="help.html" class="dropdown">Help</a>
+            <div class="drop-content">
+              <a href="./help/guide.html">New Players Guide</a>
+              <a href="./help/faq.html">FAQ</a>
+            </div>
+          </li>
+
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <nav id="mobile">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section id="login">
+          <img src="./images/title_login.png">
+          <form name="registration" action="register.php" method="post">
+            <fieldset id="loginInf">
+              <legend>Login Information</legend>
+              <label for="userName">Username</label>
+              <input placeholder="Username" required id="userName" type="text" name="userName">
+
+              <label for="userPass">Password</label>
+              <input placeholder="Password" required id="userPass" type="password" name="userPass">
+              <input type="submit" value="login">
+            </fieldset>
+          </form>
+        </section>
+
+        <section id="updates">
+          <img src="./images/title_news.png">
+          <h2>This is an example of an update.</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus molestie dictum. Morbi pharetra faucibus mauris vel faucibus. Donec pellentesque elementum nulla, et convallis mi fringilla eget. Aliquam erat volutpat. Vivamus tristique elit id lobortis ultricies. Nullam ut purus nec diam tempor tempor. Ut augue orci, luctus quis magna at, rutrum lobortis metus.
+          </p>
+          <h3>There is more than one update</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus molestie dictum. Morbi pharetra faucibus mauris vel faucibus. Donec pellentesque elementum nulla, et convallis mi fringilla eget. Aliquam erat volutpat. Vivamus tristique elit id lobortis ultricies. Nullam ut purus nec diam tempor tempor. Ut augue orci, luctus quis magna at, rutrum lobortis metus.
+          </p>
+          <h3>There are a few updates</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus molestie dictum. Morbi pharetra faucibus mauris vel faucibus. Donec pellentesque elementum nulla, et convallis mi fringilla eget. Aliquam erat volutpat. Vivamus tristique elit id lobortis ultricies. Nullam ut purus nec diam tempor tempor. Ut augue orci, luctus quis magna at, rutrum lobortis metus.
+          </p>
+        </section>
+
+        <section id="register">
+          <img src="../images/title_login.png">
+          <form method="post">
+            <fieldset id="registerInf">
+              <legend>Register:</legend>
+              <label for="userName">Username</label>
+              <input placeholder="Username" required id="userName" type="text" name="userName">
+              <label for="userEmail">Email</label>
+              <input placeholder="Email" required id="userEmail" type="email" name="userEmail">
+              <label for="userPass">Password</label>
+              <input placeholder="Password" required id="userPass" type="password" name="userPass">
+              <input type="submit" value="login">
+            </fieldset>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script>
+      alert('Notice! This website is still under construction!')
+    </script>
+  </body>
+</html>
