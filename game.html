@@ -43,6 +43,48 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button onclick="showSwords(true)" id="start">Start Game</button>
+      <div id="choose">
+        <button onClick="dagger()">Choose the Dagger</button>
+        <button onClick="short()">Choose the Shortsword</button>
+        <button onClick="long()">Choose the Longsword</button>
+        <button onClick="broad()">Choose the Broadsword</button>
+      </div>
+      <div id="swords">
+        <pre id="dagger">
+          /| ____________
+    O|===|* >____________>
+          \|
+                    Enchanted Dagger
+        </pre>
+        <p id="statsDagger"></p>
+        <pre id="short">
+     _      ||__________________
+    (_|%|%|%|[__________________>
+            ||
+                    Hardened Shortsword
+        </pre>
+        <p id="statsShort"></p>
+        <pre id="long">
+             />_________________________________
+    [########[]_________________________________>
+             \>
+                    Trusty Longsword
+        </pre>
+        <p id="statsLong"></p>
+        <pre id="broad">
+
+                  />
+      (          //------------------------------------(
+    (*)OXOXOXOXO(*>            --------                 \
+      (          \\--------------------------------------)
+                  \>
+                    Brutal Cleaver
+        </pre>
+        <p id="statsBroad"></p>
+      </div>
+      <button onClick="fight()" id="confirm">Confirm Selection</button>
     </div>
   </body>
+  <script type="text/javascript" src="./scripts/baseGame.js"></script>
 </html>
