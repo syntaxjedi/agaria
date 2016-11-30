@@ -5,6 +5,7 @@ var critChance; // dice roll multiplied by this ammount to determine critical hi
 var speed; //max ammount of times player can hit per turn, range 1 - #speed
 var selected;
 
+/*Have to use get ById because there are too many variables to get ByClassName*/
 var statsDView = document.getElementById("statsDagger");
 var statsSView = document.getElementById("statsShort");
 var statsLView = document.getElementById("statsLong");
@@ -22,6 +23,7 @@ function showSwords(show){
     document.getElementById("swords").style.display = "block";
     document.getElementById("choose").style.display = "block";
     document.getElementById("start").style.display = "none";
+    /*probably don't need this, will update later*/
     statsDView.style.display = "none";
     statsSView.style.display = "none";
     statsLView.style.display = "none";
