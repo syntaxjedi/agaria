@@ -5,11 +5,8 @@ var critChance; // dice roll multiplied by this ammount to determine critical hi
 var speed; //max ammount of times player can hit per turn, range 1 - #speed
 var selected;
 
-/*Have to use get ById because there are too many variables to get ByClassName*/
-var statsDView = document.getElementById("statsDagger");
-var statsSView = document.getElementById("statsShort");
-var statsLView = document.getElementById("statsLong");
-var statsBView = document.getElementById("statsBroad");
+var x = document.getElementsByClassName("swords");
+var i;
 
 var buttonView = document.getElementById("choose");
 var confirmView = document.getElementById("confirm");
@@ -23,19 +20,17 @@ function showSwords(show){
     document.getElementById("swords").style.display = "block";
     document.getElementById("choose").style.display = "block";
     document.getElementById("start").style.display = "none";
-    /*probably don't need this, will update later*/
-    statsDView.style.display = "none";
-    statsSView.style.display = "none";
-    statsLView.style.display = "none";
-    statsBView.style.display = "none";
   }
 }
 
 function dagger(){
-  statsDView.style.display = "block";
-  statsSView.style.display = "none";
-  statsLView.style.display = "none";
-  statsBView.style.display = "none";
+  for(i=0; i<x.length; i++){
+    if(i == 1 || i == 2 || i == 0){
+      x[i].style.display = "block";
+    }else{
+      x[i].style.display = "none";
+    }
+  }
   confirmView.style.display = "block";
   damage = 3;
   crit = 6;
@@ -50,10 +45,14 @@ function dagger(){
 }
 
 function short(){
-  statsDView.style.display = "none";
-  statsSView.style.display = "block";
-  statsLView.style.display = "none";
-  statsBView.style.display = "none";
+  for(i=0; i<x.length; i++){
+    if(i == 3 || i == 4 || i == 0 ){
+      x[i].style.display = "block";
+    }else{
+      x[i].style.display = "none";
+    }
+  }
+
   confirmView.style.display = "block";
   damage = 5;
   crit = 6;
@@ -68,10 +67,14 @@ function short(){
 }
 
 function long(){
-  statsDView.style.display = "none";
-  statsSView.style.display = "none";
-  statsLView.style.display = "block";
-  statsBView.style.display = "none";
+  for(i=0; i<x.length; i++){
+    if(i == 5 || i == 6 || i == 0){
+      x[i].style.display = "block";
+    }else{
+      x[i].style.display = "none";
+    }
+  }
+
   confirmView.style.display = "block";
   damage = 8;
   crit = 10;
@@ -86,10 +89,14 @@ function long(){
 }
 
 function broad(){
-  statsDView.style.display = "none";
-  statsSView.style.display = "none";
-  statsLView.style.display = "none";
-  statsBView.style.display = "block";
+  for(i=0; i<x.length; i++){
+    if(i == 7 || i == 8 || i == 0){
+      x[i].style.display = "block";
+    }else{
+      x[i].style.display = "none";
+    }
+  }
+
   confirmView.style.display = "block";
   damage = 11;
   crit = 12;
