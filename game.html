@@ -43,35 +43,37 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <button onclick="showSwords(true)" id="start">Start Game</button>
+      <button onclick="showSwords()" id="start">Start Game</button>
       <div id="choose">
-        <button onClick="dagger()">Choose the Dagger</button>
-        <button onClick="short()">Choose the Shortsword</button>
-        <button onClick="long()">Choose the Longsword</button>
-        <button onClick="broad()">Choose the Broadsword</button>
+        <button onClick="dagger()" class="button">Choose the Dagger</button>
+        <button onClick="short()" class="button">Choose the Shortsword</button>
+        <button onClick="long()" class="button">Choose the Longsword</button>
+        <button onClick="broad()" class="button">Choose the Broadsword</button>
+      </div>
+      <div id="chooseEnemey">
+        <button onClick="enem1()" class="button">Choose to fight the Orc.</button>
+        <button onclick="enem2()" class="button">Choose to fight the Centuar.</button>
+        <button onClick="enem3()" class="button">Choose to fight the Dwarf.</button>
       </div>
       <div class="swords" id="swords">
         <pre class="swords" id="dagger">
-          /| ____________
-    O|===|* >____________>
-          \|
+                       /| ____________
+                 O|===|* >____________>
+                       \|
                     Enchanted Dagger
         </pre>
-        <p class="swords" id="statsDagger"></p>
         <pre class="swords" id="short">
-     _      ||__________________
-    (_|%|%|%|[__________________>
-            ||
+                _      ||__________________
+               (_|%|%|%|[__________________>
+                       ||
                     Hardened Shortsword
         </pre>
-        <p class="swords" id="statsShort"></p>
         <pre class="swords" id="long">
-             />_________________________________
-    [########[]_________________________________>
-             \>
+                />_________________________________
+       [########[]_________________________________>
+                \>
                     Trusty Longsword
         </pre>
-        <p class="swords" id="statsLong"></p>
         <pre class="swords" id="broad">
 
                   />
@@ -81,12 +83,29 @@
                   \>
                     Brutal Cleaver
         </pre>
-        <p class="swords" id="statsBroad"></p>
       </div>
-      <p id="diceRoll"></p>
-      <p id="critRoll"></p>
-      <p id="totalDamage"></p>
+      <div class="enemy" id="enemyWhole">
+        <pre class = "enemy" id="orc">
+          >:(
+        </pre>
+
+        <pre class = "enemy" id="Centaur">
+          ):<
+        </pre>
+
+        <pre class = "enemy" id="Dwarf">
+          :()
+        </pre>
+      </div>
+      <p id="stats"></p>
+      <p id="health"></p>
+      <p id="enemyHealth"></p>
+      <p id="extraHit" class="dice"></p>
+      <p id="diceRoll" class="dice"></p>
+      <p id="critRoll" class="dice"></p>
+      <p id="totalDamage" class="dice"></p>
       <button onClick="confirm()" id="confirm">Fight</button>
+      <button onClick="chooseEnem()" id="cEnem" class="button">Choose Enemy</button>
     </div>
   </body>
   <script type="text/javascript" src="./scripts/baseGame.js"></script>

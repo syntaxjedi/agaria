@@ -1,4 +1,39 @@
 /*desktop site is default*/
+.swords{
+  margin-top: 40px;
+  margin-left: 17%;
+  padding: 0;
+}
+
+#choose, #chooseEnemey{
+  margin-left: 17%;
+}
+
+#start{
+  margin-left: 41%;
+}
+#confirm, #cEnem{
+  margin-left: 47%;
+  text-align: center;
+}
+#stats, .dice{
+  text-align: center;
+}
+
+#start, #confirm, .button{
+  background-color: #5e9b29;
+  border: none;
+  box-shadow: 2px 2px 2px #000;
+  font-size: 15px;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "lucidia Typewriter", monospace;
+  float: left;
+  padding: 5px;
+  text-align: center;
+}
+
+#start:hover, #confirm:hover, .button:hover{
+  background-color: #99d347
+}
 
 #wrapper{
   background-color: rgba(127, 106, 87, 0.95);
