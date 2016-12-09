@@ -15,6 +15,7 @@ var enemHealth = 0;
 var enemMinDamage = 0;
 var enemMaxDamage = 0;
 var enemDamageDone = 0;
+var name = "";
 
 var outputDamage = document.getElementById("diceRoll");
 var outputCrit = document.getElementById("critRoll");
@@ -41,6 +42,8 @@ function showSwords(){
   document.getElementById("swords").style.display = "block";
   document.getElementById("choose").style.display = "block";
   document.getElementById("start").style.display = "none";
+  name = prompt("What is your name warrior?");
+  document.getElementById("name").innerHTML = name;
 }
 
 function dagger(){
@@ -146,6 +149,7 @@ function confirm(){
   confirmView.style.display = "none";
   document.getElementById("choose").style.display = "none";
   document.getElementById("stats").style.display = "none";
+  document.getElementById("chooseEnemey").style.display = "none";
 
   /*hides all the buttons/reformats page for later*/
   for(var i=0; i<x.length; i++){
@@ -269,7 +273,6 @@ function fight(){
       outputCrit.style.display = "none";
       outputTotal.style.display = "block";
       outputTotal.innerHTML = ("Total Damage: " + totalDamage);
-      confirmView.style.display = "block";
       temp = 0;
       totalDamage = 0;
     }

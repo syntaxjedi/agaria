@@ -1,6 +1,5 @@
 /*desktop site is default*/
 .swords{
-  margin-top: 40px;
   margin-left: 17%;
   padding: 0;
 }
@@ -16,8 +15,18 @@
   margin-left: 47%;
   text-align: center;
 }
-#stats, .dice{
+#stats, #health, #enemyHealth, .enemy, .dice{
   text-align: center;
+}
+
+#health, #enemyHealth{
+  color: #5e9b29;
+  font-weight: bold;
+}
+
+#name{
+  text-align: center;
+  margin-top: 32px;
 }
 
 #start, #confirm, .button{
