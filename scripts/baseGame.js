@@ -20,7 +20,8 @@ var outputDamage = document.getElementById("diceRoll");
 var outputCrit = document.getElementById("critRoll");
 var outputTotal = document.getElementById("totalDamage");
 var outputExtra = document.getElementById("extraHit");
-var swords = document.getElementsByClassName("swords");
+var swords = document.getElementById("swords");
+var swordsClass = document.getElementsByClassName("swords");
 var buttonView = document.getElementById("choose");
 var confirmView = document.getElementById("confirm");
 var stats = document.getElementById("stats");
@@ -46,11 +47,11 @@ function showSwords(){
 
 function dagger(){
   /*checks array for specific weapons/tooltips, hides everything else*/
-  for(var i=0; i<swords.length; i++){
+  for(var i=0; i<swordsClass.length; i++){
     if(i == 1 || i == 0){
-      x[i].style.display = "block";
+      swordsClass[i].style.display = "block";
     }else{
-      x[i].style.display = "none";
+      swordsClass[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
@@ -75,11 +76,11 @@ function dagger(){
 }
 
 function short(){
-  for(var i=0; i<swords.length; i++){
+  for(var i=0; i<swordsClass.length; i++){
     if(i == 2 || i == 0 ){
-      swords[i].style.display = "block";
+      swordsClass[i].style.display = "block";
     }else{
-      swords[i].style.display = "none";
+      swordsClass[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
@@ -98,11 +99,11 @@ function short(){
 }
 
 function long(){
-  for(var i=0; i<swords.length; i++){
+  for(var i=0; i<swordsClass.length; i++){
     if(i == 3 || i == 0){
-      swords[i].style.display = "block";
+      swordsClass[i].style.display = "block";
     }else{
-      swords[i].style.display = "none";
+      swordsClass[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
@@ -121,11 +122,11 @@ function long(){
 }
 
 function broad(){
-  for(var i=0; i<swords.length; i++){
+  for(var i=0; i<swordsClass.length; i++){
     if(i == 4 || i == 0){
-      swords[i].style.display = "block";
+      swordsClass[i].style.display = "block";
     }else{
-      swords[i].style.display = "none";
+      swordsClass[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
@@ -150,11 +151,11 @@ function confirm(){
   document.getElementById("chooseEnemey").style.display = "none";
 
   /*hides all the buttons/reformats page for later*/
-  for(var i=0; i<swords.length; i++){
-    if (x[i].style.display === "block" || i == 0){
-      x[i].style.display = "block";
+  for(var i=0; i<swordsClass.length; i++){
+    if (swordsClass[i].style.display === "block" || i == 0){
+      swordsClass[i].style.display = "block";
     }else{
-      x[i].style.display == "none";
+      swordsClass[i].style.display == "none";
     }
   }
   fight();
