@@ -5,7 +5,6 @@ var crit = 0; //the critical damage, includes base damage eg: damage = 10 :: cri
 var critChance = 0; // dice roll multiplied by this ammount to determine critical hit
 var speed = 0; //max ammount of times player can hit per turn, range 1 - #speed
 var selected;
-var temp = 0;
 var totalDamage = 0;
 var eHit = 0;
 var critRN = Math.floor(critChance * 100);
@@ -21,7 +20,7 @@ var outputDamage = document.getElementById("diceRoll");
 var outputCrit = document.getElementById("critRoll");
 var outputTotal = document.getElementById("totalDamage");
 var outputExtra = document.getElementById("extraHit");
-var x = document.getElementsByClassName("swords");
+var swords = document.getElementsByClassName("swords");
 var buttonView = document.getElementById("choose");
 var confirmView = document.getElementById("confirm");
 var stats = document.getElementById("stats");
@@ -30,17 +29,16 @@ var enemChoose = document.getElementById("cEnem");
 var healthBar = document.getElementById("health");
 var enemHealthBar = document.getElementById("enemyHealth");
 
-document.getElementById("swords").style.display = "none";
-document.getElementById("choose").style.display = "none";
+swords.style.display = "none";
+buttonView.style.display = "none";
+enemChoose.style.display = "none";
+confirmView.style.display = "none";
 document.getElementById("enemyWhole").style.display = "none";
 document.getElementById("chooseEnemey").style.display = "none";
 
-enemChoose.style.display = "none";
-confirmView.style.display = "none";
-
 function showSwords(){
-  document.getElementById("swords").style.display = "block";
-  document.getElementById("choose").style.display = "block";
+  swords.style.display = "block";
+  buttonView.style.display = "block";
   document.getElementById("start").style.display = "none";
   name = prompt("What is your name warrior?");
   document.getElementById("name").innerHTML = name;
@@ -48,7 +46,7 @@ function showSwords(){
 
 function dagger(){
   /*checks array for specific weapons/tooltips, hides everything else*/
-  for(var i=0; i<x.length; i++){
+  for(var i=0; i<swords.length; i++){
     if(i == 1 || i == 0){
       x[i].style.display = "block";
     }else{
@@ -77,18 +75,18 @@ function dagger(){
 }
 
 function short(){
-  for(var i=0; i<x.length; i++){
+  for(var i=0; i<swords.length; i++){
     if(i == 2 || i == 0 ){
-      x[i].style.display = "block";
+      swords[i].style.display = "block";
     }else{
-      x[i].style.display = "none";
+      swords[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
   enemChoose.style.display = "block";
   minDamage = 5;
   maxDamage = 7;
-  crit = 7;
+  crit = 10;
   critChance = 0.03;
   speed = 2;
   stats.innerHTML =
@@ -100,11 +98,11 @@ function short(){
 }
 
 function long(){
-  for(var i=0; i<x.length; i++){
+  for(var i=0; i<swords.length; i++){
     if(i == 3 || i == 0){
-      x[i].style.display = "block";
+      swords[i].style.display = "block";
     }else{
-      x[i].style.display = "none";
+      swords[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
@@ -123,11 +121,11 @@ function long(){
 }
 
 function broad(){
-  for(var i=0; i<x.length; i++){
+  for(var i=0; i<swords.length; i++){
     if(i == 4 || i == 0){
-      x[i].style.display = "block";
+      swords[i].style.display = "block";
     }else{
-      x[i].style.display = "none";
+      swords[i].style.display = "none";
     }
   }
   confirmView.style.display = "none";
@@ -147,12 +145,12 @@ function broad(){
 
 function confirm(){
   confirmView.style.display = "none";
-  document.getElementById("choose").style.display = "none";
-  document.getElementById("stats").style.display = "none";
+  buttonView.style.display = "none";
+  stats.style.display = "none";
   document.getElementById("chooseEnemey").style.display = "none";
 
   /*hides all the buttons/reformats page for later*/
-  for(var i=0; i<x.length; i++){
+  for(var i=0; i<swords.length; i++){
     if (x[i].style.display === "block" || i == 0){
       x[i].style.display = "block";
     }else{
@@ -165,11 +163,10 @@ function confirm(){
 function chooseEnem(){
   document.getElementById("enemyWhole").style.display = "block";
   document.getElementById("chooseEnemey").style.display = "block";
-  document.getElementById("choose").style.display = "none";
   document.getElementById("confirm").style.display = "none";
+  buttonView.style.display = "none";
   enemChoose.style.display = "none";
   stats.style.display = "none";
-
 }
 
 function enem1(){
@@ -249,7 +246,6 @@ function fight(){
         damageDoneExtra = Math.floor(Math.random()*maxDamage)+minDamage;
         damageDone = damageDone + damageDoneExtra;
         eHit++;
-        console.log(eHit);
       }
     }
     if(isCrit <= critRN){
@@ -273,7 +269,6 @@ function fight(){
       outputCrit.style.display = "none";
       outputTotal.style.display = "block";
       outputTotal.innerHTML = ("Total Damage: " + totalDamage);
-      temp = 0;
       totalDamage = 0;
     }
   }, 1500)
