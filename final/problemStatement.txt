@@ -1,0 +1,16 @@
+The purpose of this program was to test my javascript skills and start making
+the basic functions of my game. This template will be built on in the future
+and will eventually become a fully function game.
+
+What it will do:
+1. ask the user for their "warrior" name
+2. show the user a list of weapons they can choose from to defeat various
+   enemies, these weapons will have all the stats displayed below them
+3. show the user a list of enemies they can fight, upon choosing an enemy the
+   program will:
+4. begin running a test fight using the selected weapon, the program will
+   calculate the weapon damage, any extra hits, any critical hits, and the
+   enemy's damage, it will then decrement the health accordingly, once the user
+   or the enemy is out of health, the program will stop and:
+5. display the final health of both user and enemy, and the total damage the
+   user did against the enemy.
